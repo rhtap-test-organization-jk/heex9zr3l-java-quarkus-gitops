@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: heex9zr3l-java-quarkus-gitops
+  description: This is GitOps manifest for heex9zr3l-java-quarkus   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: heex9zr3l-java-quarkus
+    backstage.io/kubernetes-id: heex9zr3l-java-quarkus 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: heex9zr3l-java-quarkus-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:heex9zr3l-java-quarkus
